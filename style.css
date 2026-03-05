@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #333; }
+header { background: #eaeaea; padding: 16px; }
+h1 { margin: 0; }
+
+nav { background: #fff; border-bottom: 1px solid #ddd; }
+nav ul { list-style: none; margin: 0; padding: 8px 16px; display: flex; gap: 12px; }
+nav ul li { /* 🔥 PONTO DE CONFLITO: dois alunos devem alterar este seletor */ }
+nav a { text-decoration: none; }
+
+main { padding: 16px; }
+#user-box { margin-top: 16px; padding: 12px; background: #fff; border: 1px solid #ddd; border-radius: 4px; }
+
+footer { text-align: center; padding: 12px; background: #fafafa; border-top: 1px solid #eee; }
