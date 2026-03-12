@@ -1,3 +1,7 @@
+:root { --btn-bg: #1976d2; }
+.btn { background: var(--btn-bg); }
+
+
 * { box-sizing: border-box; }
 body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #333; }
 header { background: #eaeaea; padding: 16px; }
