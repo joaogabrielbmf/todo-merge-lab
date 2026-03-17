@@ -1,4 +1,8 @@
 // app.js – funções simples para forçar conflitos controlados
+let doneCount = 0;
+const title = document.getElementById('title');
+function updateTitle() { title.textContent = `TaskBoard — Concluídas: ${doneCount}`; }
+
 function toggleDone(li) {
   li.classList.toggle('done');
 
@@ -9,6 +13,8 @@ function toggleDone(li) {
   } else {
     li.textContent = li.dataset.originalText || li.textContent.replace(/^✅\s*/, '');
   }
+  doneCount += li.classList.contains('done') ? 1 : -1;
+  updateTitle();
 }
 
 function formatUser(user) {
