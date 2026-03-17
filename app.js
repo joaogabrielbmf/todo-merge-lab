@@ -2,7 +2,7 @@
 function toggleDone(li) {
   li.classList.toggle('done');
 
-  // Lógica do emoji
+  // Lógica do emoji teste
   if (li.classList.contains('done')) {
     li.dataset.originalText = li.dataset.originalText || li.textContent.replace(/^✅\s*/, '');
     li.textContent = `✅ ${li.dataset.originalText}`;
