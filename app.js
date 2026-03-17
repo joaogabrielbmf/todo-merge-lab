@@ -1,14 +1,13 @@
 // app.js – funções simples para forçar conflitos controlados
+let doneCount = 0;
+const title = document.getElementById('title');
+function updateTitle() { title.textContent = `TaskBoard — Concluídas: ${doneCount}`; }
+
 function toggleDone(li) {
   li.classList.toggle('done');
 
-  // Lógica do emoji
-  if (li.classList.contains('done')) {
-    li.dataset.originalText = li.dataset.originalText || li.textContent.replace(/^✅\s*/, '');
-    li.textContent = `✅ ${li.dataset.originalText}`;
-  } else {
-    li.textContent = li.dataset.originalText || li.textContent.replace(/^✅\s*/, '');
-  }
+  doneCount += li.classList.contains('done') ? 1 : -1;
+  updateTitle();
 }
 
 function formatUser(user) {
