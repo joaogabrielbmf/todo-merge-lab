@@ -1,4 +1,15 @@
 // app.js – funções simples para forçar conflitos controlados
+function toggleDone(li) {
+  li.classList.toggle('done');
+
+  // Lógica do emoji
+  if (li.classList.contains('done')) {
+    li.dataset.originalText = li.dataset.originalText || li.textContent.replace(/^✅\s*/, '');
+    li.textContent = `✅ ${li.dataset.originalText}`;
+  } else {
+    li.textContent = li.dataset.originalText || li.textContent.replace(/^✅\s*/, '');
+  }
+}
 
 function formatUser(user) {
   // 🔥 PONTO DE CONFLITO: vários alunos alterarão este mesmo trecho
